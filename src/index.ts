@@ -9,6 +9,10 @@ export default class EnvSetup {
 
   constructor(config: IConfig) {
     // Check config
+    if (!config) {
+      this.log('No config specified')
+      process.exit(0)
+    }
     if (!config.envFilePath) {
       this.log(
         'No .env file path specified. Please provide a path to where your .env file is located as config.envFilePath'
@@ -27,6 +31,10 @@ export default class EnvSetup {
       )
       process.exit(0)
     }
+    this.init(config)
+  }
+
+  public init(config: IConfig) {
     this.vars = config.vars
     this.requiredKeys = this.flattenVars(config.vars)
     this.checkEnvFile(config.envFilePath)
