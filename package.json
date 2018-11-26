@@ -1,0 +1,25 @@
+{
+  "name": "@johanneshighspirits/env-setup",
+  "version": "0.0.1",
+  "description": "Keep track of required environment variables",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepublish": "build"
+  },
+  "keywords": [
+    "webpack",
+    ".env"
+  ],
+  "author": "Johannes Borgström",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.12.10",
+    "@types/prettier": "^1.15.1",
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "prettier": "^1.15.2"
+  }
+}
