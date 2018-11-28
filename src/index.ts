@@ -23,7 +23,6 @@ export default class EnvSetup {
       this.log(
         'No webpack config path specified. Please provide a path to your webpack config file as config.webpackConfigPath'
       )
-      process.exit(0)
     }
     if (!config.vars) {
       this.log(
@@ -38,7 +37,9 @@ export default class EnvSetup {
     this.vars = config.vars
     this.requiredKeys = this.flattenVars(config.vars)
     this.checkEnvFile(config.envFilePath)
-    this.checkWebpackConfig(config.webpackConfigPath)
+    if (config.webpackConfigPath) {
+      this.checkWebpackConfig(config.webpackConfigPath)
+    }
   }
 
   /**
