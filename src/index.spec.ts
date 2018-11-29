@@ -1,4 +1,4 @@
-import EnvSetup from './index'
+import EnvSetup from './EnvSetup'
 import { IConfig } from './interfaces'
 
 describe('constructor', () => {
