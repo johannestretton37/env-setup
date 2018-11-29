@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Keep track of required environment variables",
   "main": "bin/index.js",
+  "bin": {
+    "env-setup": "./bin/index.js"
+  },
   "scripts": {
     "test": "jest",
     "build": "rimraf bin && tsc",
