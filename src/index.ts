@@ -3,8 +3,6 @@
 import EnvSetup from './EnvSetup'
 import path = require('path')
 
-console.log('[ENV SETUP] init')
-
 if (process.argv.length > 1) {
   if (process.argv[2] === '--config') {
     const configPath = process.argv[3]
