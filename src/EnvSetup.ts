@@ -120,7 +120,8 @@ export default class EnvSetup {
       }
       // The file exists, check if all variables are present
       const fileContent = prettier.format(file.toString(), {
-        parser: 'babylon'
+        parser: 'babylon',
+        singleQuote: true
       })
       const missingKeys = []
       this.requiredKeys.forEach(key => {
